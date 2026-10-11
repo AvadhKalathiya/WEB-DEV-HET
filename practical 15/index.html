@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 15 - Master Integration, Automated Testing & Deployment Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Master Header -->
+        <header class="master-header">
+            <div class="header-content">
+                <span class="badge">Practical 15 • Capstone Integration • ITUE203</span>
+                <h1>CHARUSAT Web Engineering Portal</h1>
+                <p>Complete Practicals 1 through 15 Architecture, Integration Matrix, Automated Health Suite & GitHub Artifacts</p>
+            </div>
+            <div class="system-pills">
+                <span class="pill-live"><i class="fa-solid fa-circle-check"></i> System Operational</span>
+                <span class="pill-meta"><i class="fa-brands fa-php"></i> PHP 8.2</span>
+                <span class="pill-meta"><i class="fa-solid fa-database"></i> MySQL 8.0</span>
+            </div>
+        </header>
+
+        <!-- Test Runner Diagnostic Suite -->
+        <section class="card test-suite-card">
+            <div class="suite-header">
+                <div>
+                    <h2><i class="fa-solid fa-vial-circle-check"></i> Automated Quality Assurance & Verification Suite</h2>
+                    <p class="subtitle">Real-time health verification across all practical modules (5 to 15)</p>
+                </div>
+                <button id="runTestsBtn" class="btn btn-primary">
+                    <i class="fa-solid fa-play"></i> Re-Run Test Suite
+                </button>
+            </div>
+
+            <div id="testProgress" class="progress-bar-wrap" style="display: none;">
+                <div class="progress-bar" id="testBar"></div>
+            </div>
+
+            <div class="test-results-grid" id="testResultsGrid">
+                <!-- Populated via automated JS test runner -->
+            </div>
+        </section>
+
+        <!-- Practicals 1 to 15 Navigation & Coverage Matrix -->
+        <section class="card matrix-card">
+            <h2><i class="fa-solid fa-list-check"></i> Complete Practicals Directory & Direct Navigation Hub</h2>
+            <div class="practicals-grid">
+                <!-- Practical 1 -->
+                <div class="practical-card">
+                    <div class="p-header">
+                        <span class="p-num">P1</span>
+                        <h4>Project Initiation & Wireframes</h4>
+                    </div>
+                    <p>Sitemap, wireframes, requirements, and Git setup.</p>
+                    <a href="../practical 1 & 2 & 3/home.html" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 1</a>
+                </div>
+
+                <!-- Practical 2 -->
+                <div class="practical-card">
+                    <div class="p-header">
+                        <span class="p-num">P2</span>
+                        <h4>Semantic HTML5 & Accessibility</h4>
+                    </div>
+                    <p>ARIA landmarks, semantic HTML5 structure.</p>
+                    <a href="../practical 1 & 2 & 3/home.html" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 2</a>
+                </div>
+
+                <!-- Practical 3 -->
+                <div class="practical-card">
+                    <div class="p-header">
+                        <span class="p-num">P3</span>
+                        <h4>Responsive Design & CSS Grid</h4>
+                    </div>
+                    <p>Flexbox, CSS Grid, media queries, mobile-ready layout.</p>
+                    <a href="../practical 1 & 2 & 3/home.html" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 3</a>
+                </div>
+
+                <!-- Practical 5 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P5</span>
+                        <h4>Frontend Form Validation</h4>
+                    </div>
+                    <p>Regex matching, real-time feedback, password strength meter.</p>
+                    <a href="../practical 5/index.html" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 5</a>
+                </div>
+
+                <!-- Practical 6 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P6</span>
+                        <h4>Fetch API & JSON Filter</h4>
+                    </div>
+                    <p>Asynchronous data rendering, dynamic filtering & sorting.</p>
+                    <a href="../practical 6/index.html" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 6</a>
+                </div>
+
+                <!-- Practical 7 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P7</span>
+                        <h4>PHP Validation & CSV/JSON</h4>
+                    </div>
+                    <p>Server-side sanitization, dual CSV & JSON storage.</p>
+                    <a href="../practical 7/index.php" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 7</a>
+                </div>
+
+                <!-- Practical 8 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P8</span>
+                        <h4>MySQL Schema & Connectivity</h4>
+                    </div>
+                    <p>Relational ER design, foreign keys, PDO & MySQLi drivers.</p>
+                    <a href="../practical 8/index.php" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 8</a>
+                </div>
+
+                <!-- Practical 9 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P9</span>
+                        <h4>BCRYPT Registration & Security</h4>
+                    </div>
+                    <p>Password hashing, duplicate checks, SQL protection.</p>
+                    <a href="../practical 9/index.php" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 9</a>
+                </div>
+
+                <!-- Practical 10 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P10</span>
+                        <h4>Sessions, RBAC & Tokens</h4>
+                    </div>
+                    <p>Session timeout, remember-me token cookie, RBAC gates.</p>
+                    <a href="../practical 10/index.php" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 10</a>
+                </div>
+
+                <!-- Practical 11 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P11</span>
+                        <h4>Student Management CRUD</h4>
+                    </div>
+                    <p>Full SQL CRUD with multi-column parameterized search.</p>
+                    <a href="../practical 11/index.php" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 11</a>
+                </div>
+
+                <!-- Practical 12 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P12</span>
+                        <h4>Event CRUD & Poster Upload</h4>
+                    </div>
+                    <p>Multipart image upload, MIME validation, 2MB size limit.</p>
+                    <a href="../practical 12/index.php" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 12</a>
+                </div>
+
+                <!-- Practical 13 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P13</span>
+                        <h4>Zero-Reload AJAX / REST API</h4>
+                    </div>
+                    <p>Single Page AJAX CRUD using Fetch API & PHP REST backend.</p>
+                    <a href="../practical 13/index.html" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 13</a>
+                </div>
+
+                <!-- Practical 14 -->
+                <div class="practical-card highlight">
+                    <div class="p-header">
+                        <span class="p-num">P14</span>
+                        <h4>Admin Dashboard & Dynamic Menu</h4>
+                    </div>
+                    <p>Live metrics, role-specific navigation, administration UI.</p>
+                    <a href="../practical 14/index.php" class="p-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Practical 14</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation & Submission Guidelines -->
+        <section class="card docs-card">
+            <h2><i class="fa-solid fa-file-invoice"></i> Practical 15 GitHub Submission & Deployment Instructions</h2>
+            <div class="docs-grid">
+                <div class="doc-box">
+                    <h4><i class="fa-brands fa-git-alt"></i> Git Commands for Submission</h4>
+                    <pre><code>git status
+git add .
+git commit -m "Complete Web Development Practicals 5-15 with end-to-end testing"
+git push origin main</code></pre>
+                </div>
+                <div class="doc-box">
+                    <h4><i class="fa-solid fa-server"></i> Local Deployment Verification</h4>
+                    <p>Run PHP embedded development server in the project workspace:</p>
+                    <pre><code>php -S 127.0.0.1:8000</code></pre>
+                    <p>Access the master integration hub at <code>http://127.0.0.1:8000/practical 15/</code></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="test-runner.js"></script>
+</body>
+</html>

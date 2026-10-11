@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARUSAT Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Header -->
+
+<header class="box">
+
+    <div class="logo">
+        <h2>CHARUSAT</h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="fee.html">Fee</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+    </nav>
+
+    <div class="buttons">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+    </div>
+
+    <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+
+</header>
+
+<!-- Hero -->
+
+<section class="hero box">
+
+    <h1 class="title-box">
+        Welcome to CHARUSAT Student Portal
+    </h1>
+
+    <p class="text-box">
+        Access courses, assignments, announcements,
+        calendar and results from one place.
+    </p>
+
+    <a class="hero-button" href="courses.html">Explore Courses</a>
+
+</section>
+
+<!-- Student Services -->
+
+<section class="box">
+
+    <h2 class="title-box">
+        Student Services
+    </h2>
+
+    <div class="card-container">
+
+        <a class="card-link" href="courses.html">
+            <div class="card box">
+                <i class="fa-solid fa-book"></i>
+                <h3>Courses</h3>
+                <p>View all courses.</p>
+            </div>
+        </a>
+
+        <a class="card-link" href="calendar.html">
+            <div class="card box">
+                <i class="fa-solid fa-calendar"></i>
+                <h3>Calendar</h3>
+                <p>Academic calendar.</p>
+            </div>
+        </a>
+
+        <a class="card-link" href="results.html">
+            <div class="card box">
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Results</h3>
+                <p>Check semester result.</p>
+            </div>
+        </a>
+
+        <a class="card-link" href="login.html">
+            <div class="card box">
+                <i class="fa-solid fa-clipboard"></i>
+                <h3>Assignments</h3>
+                <p>Submit assignments.</p>
+            </div>
+        </a>
+
+        <a class="card-link" href="announcements.html">
+            <div class="card box">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h3>Announcements</h3>
+                <p>Latest university news.</p>
+            </div>
+        </a>
+
+        <a class="card-link" href="login.html">
+            <div class="card box">
+                <i class="fa-solid fa-user"></i>
+                <h3>Profile</h3>
+                <p>Student profile.</p>
+            </div>
+        </a>
+
+        <a class="card-link" href="fee.html">
+            <div class="card box">
+                <i class="fa-solid fa-wallet"></i>
+                <h3>Fee</h3>
+                <p>View fee details.</p>
+            </div>
+        </a>
+
+        <a class="card-link" href="location.html">
+            <div class="card box">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Location</h3>
+                <p>Find the university location.</p>
+            </div>
+        </a>
+
+        <a class="card-link" href="about.html">
+            <div class="card box">
+                <i class="fa-solid fa-building-columns"></i>
+                <h3>About CHARUSAT</h3>
+                <p>Know more about university.</p>
+            </div>
+        </a>
+
+
+    </div>
+
+</section>
+
+<!-- Announcements -->
+
+<section class="box">
+
+    <h2 class="title-box">
+        Latest Announcements
+    </h2>
+
+    <div class="box">
+        📢 Mid Semester Exam Starts on 20 August
+    </div>
+
+    <div class="box">
+        🎓 Placement Drive by TCS
+    </div>
+
+    <div class="box">
+        🏆 Hackathon Registration Open
+    </div>
+
+    <div class="box">
+        📚 Library Open Till 10 PM
+    </div>
+
+    <button id="announcement-button" type="button">View Announcement</button>
+
+</section>
+
+<!-- Content Slider -->
+
+<section class="box slider-section">
+
+    <h2 class="title-box">Student Portal Highlights</h2>
+
+    <div class="slider" aria-label="Student portal highlights">
+        <div class="slides">
+            <article class="slide active-slide">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.yeGclajS4ORldxN0dwEkkwHaE6?r=0&w=890&h=590&rs=1&pid=ImgDetMain&o=7&rm=3">
+                <div class="slide-content">
+                    <h3>Welcome to CHARUSAT</h3>
+                    <p>Find the information and services you need for a successful semester.</p>
+                </div>
+            </article>
+
+            <article class="slide">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900" alt="Student working on a computer">
+                <div class="slide-content">
+                    <h3>Explore Your Courses</h3>
+                    <p>Review your subjects, assignments and learning resources in one place.</p>
+                </div>
+            </article>
+
+            <article class="slide">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900" alt="Students collaborating at a desk">
+                <div class="slide-content">
+                    <h3>Stay Updated</h3>
+                    <p>Keep up with announcements, examinations and campus activities.</p>
+                </div>
+            </article>
+        </div>
+
+        <button class="slider-control previous-slide" type="button" aria-label="Previous slide">&#10094;</button>
+        <button class="slider-control next-slide" type="button" aria-label="Next slide">&#10095;</button>
+        <div class="slider-dots" aria-label="Choose a slide"></div>
+    </div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="box faq-section">
+
+    <h2 class="title-box">Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">What is CHARUSAT? <span>+</span></button>
+            <p class="faq-answer">CHARUSAT is a university that provides undergraduate, postgraduate and research education in a range of disciplines.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How can I check my semester result? <span>+</span></button>
+            <p class="faq-answer">Open the Results page from the portal and enter your enrollment number to search for your result.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How can I view my assignments? <span>+</span></button>
+            <p class="faq-answer">Sign in through the Assignments service card to view and submit your current assignments.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How can I check academic announcements? <span>+</span></button>
+            <p class="faq-answer">Use the Announcements link in the navigation or open the latest announcements section on this page.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">How can I contact the university? <span>+</span></button>
+            <p class="faq-answer">Use the Contact Us form at the bottom of this page to send a message to the university.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- Courses -->
+
+<section class="box">
+
+    <h2 class="title-box">
+        Popular Courses
+    </h2>
+
+    <div class="card-container">
+
+        <div class="card box">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" alt="Computer engineering course">
+            <h3>Computer Engineering</h3>
+        </div>
+
+        <div class="card box">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600" alt="Information technology course">
+            <h3>Information Technology</h3>
+        </div>
+
+        <div class="card box">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600" alt="Artificial intelligence course">
+            <h3>Artificial Intelligence</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Result -->
+
+<section class="box">
+
+    <h2 class="title-box">
+        Check Result
+    </h2>
+
+    <input id="enrollment-number" type="text" placeholder="Enrollment Number">
+
+    <button id="result-search-button" type="button">Search</button>
+
+    <p id="result-message" class="result-message"></p>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="box">
+
+    <h2 class="title-box">
+        Contact Us
+    </h2>
+
+    <form>
+
+        <input type="text" placeholder="Name">
+
+        <input type="email" placeholder="Email">
+
+        <textarea placeholder="Message"></textarea>
+
+        <button type="submit">Send</button>
+
+    </form>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="box">
+
+    <p>
+        © <span data-year></span> CHARUSAT Student Portal
+    </p>
+
+</footer>
+
+<!-- Announcement Modal -->
+
+<div id="announcement-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-content">
+        <button id="modal-close" class="modal-close" type="button" aria-label="Close announcement">&times;</button>
+        <h2 id="modal-title">Important Announcement</h2>
+        <p>Mid Semester Examination schedule has been updated. Please check the academic calendar for details.</p>
+    </div>
+</div>
+
+<script src="./interactive.js"></script>
+
+</body>
+</html>

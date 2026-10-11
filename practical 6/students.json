@@ -1,0 +1,82 @@
+[
+  {
+    "id": "23IT001",
+    "name": "Het Patel",
+    "department": "Information Technology",
+    "semester": 4,
+    "cgpa": 9.42,
+    "email": "het.patel@charusat.edu.in",
+    "status": "Active",
+    "skills": ["JavaScript", "PHP", "MySQL", "React"]
+  },
+  {
+    "id": "23IT012",
+    "name": "Aarav Sharma",
+    "department": "Information Technology",
+    "semester": 4,
+    "cgpa": 8.85,
+    "email": "aarav.sharma@charusat.edu.in",
+    "status": "Active",
+    "skills": ["Python", "Flask", "Docker"]
+  },
+  {
+    "id": "23CE045",
+    "name": "Diya Joshi",
+    "department": "Computer Engineering",
+    "semester": 6,
+    "cgpa": 9.15,
+    "email": "diya.joshi@charusat.edu.in",
+    "status": "Active",
+    "skills": ["Java", "Spring Boot", "AWS"]
+  },
+  {
+    "id": "23CE088",
+    "name": "Rohan Mehta",
+    "department": "Computer Engineering",
+    "semester": 4,
+    "cgpa": 7.92,
+    "email": "rohan.mehta@charusat.edu.in",
+    "status": "Internship",
+    "skills": ["C++", "Data Structures", "OpenCV"]
+  },
+  {
+    "id": "24CS019",
+    "name": "Ananya Dave",
+    "department": "Computer Science & Engineering",
+    "semester": 2,
+    "cgpa": 9.60,
+    "email": "ananya.dave@charusat.edu.in",
+    "status": "Active",
+    "skills": ["HTML5", "CSS3", "JavaScript", "Figma"]
+  },
+  {
+    "id": "22EC033",
+    "name": "Kavya Trivedi",
+    "department": "Electronics & Communication",
+    "semester": 6,
+    "cgpa": 8.40,
+    "email": "kavya.trivedi@charusat.edu.in",
+    "status": "Active",
+    "skills": ["Embedded C", "IoT", "MATLAB"]
+  },
+  {
+    "id": "23ME014",
+    "name": "Devansh Shah",
+    "department": "Mechanical Engineering",
+    "semester": 4,
+    "cgpa": 8.10,
+    "email": "devansh.shah@charusat.edu.in",
+    "status": "Active",
+    "skills": ["AutoCAD", "SolidWorks", "ANSYS"]
+  },
+  {
+    "id": "22CL029",
+    "name": "Pooja Varma",
+    "department": "Civil Engineering",
+    "semester": 8,
+    "cgpa": 8.75,
+    "email": "pooja.varma@charusat.edu.in",
+    "status": "Graduated",
+    "skills": ["STAAD Pro", "Revit", "GIS"]
+  }
+]

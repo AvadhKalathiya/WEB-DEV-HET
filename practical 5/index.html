@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 5 - Student Registration with Frontend Validation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="form-header">
+            <div class="badge">Practical 5 • ITUE203</div>
+            <h1>CHARUSAT Student Registration</h1>
+            <p>Comprehensive Client-Side Validation & User-Friendly Error Handling</p>
+        </header>
+
+        <main>
+            <div id="alertSuccess" class="alert alert-success" role="alert" style="display: none;">
+                <i class="fa-solid fa-circle-check"></i>
+                <div class="alert-content">
+                    <strong>Success!</strong> Registration details validated successfully.
+                </div>
+            </div>
+
+            <form id="registrationForm" novalidate>
+                <div class="form-row">
+                    <!-- Full Name -->
+                    <div class="form-group" id="group-fullname">
+                        <label for="fullname">Full Name <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user icon"></i>
+                            <input type="text" id="fullname" name="fullname" placeholder="e.g. Het Patel" autocomplete="name" required>
+                            <i class="fa-solid status-icon"></i>
+                        </div>
+                        <span class="error-msg" id="error-fullname">Please enter at least 3 letters.</span>
+                    </div>
+
+                    <!-- Student ID / Roll No -->
+                    <div class="form-group" id="group-studentid">
+                        <label for="studentid">Student ID <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-id-card icon"></i>
+                            <input type="text" id="studentid" name="studentid" placeholder="e.g. 23IT001" required>
+                            <i class="fa-solid status-icon"></i>
+                        </div>
+                        <span class="error-msg" id="error-studentid">Enter a valid ID (e.g., 23IT045).</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- Email -->
+                    <div class="form-group" id="group-email">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-envelope icon"></i>
+                            <input type="email" id="email" name="email" placeholder="student@charusat.edu.in" autocomplete="email" required>
+                            <i class="fa-solid status-icon"></i>
+                        </div>
+                        <span class="error-msg" id="error-email">Please enter a valid email address.</span>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group" id="group-phone">
+                        <label for="phone">Contact Number <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone icon"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required>
+                            <i class="fa-solid status-icon"></i>
+                        </div>
+                        <span class="error-msg" id="error-phone">Enter a valid 10-digit mobile number.</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- Department -->
+                    <div class="form-group" id="group-department">
+                        <label for="department">Department / Branch <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-graduation-cap icon"></i>
+                            <select id="department" name="department" required>
+                                <option value="">-- Select Department --</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Computer Engineering">Computer Engineering</option>
+                                <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+                                <option value="Electronics & Communication">Electronics & Communication</option>
+                                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                <option value="Civil Engineering">Civil Engineering</option>
+                            </select>
+                            <i class="fa-solid status-icon"></i>
+                        </div>
+                        <span class="error-msg" id="error-department">Please choose your department.</span>
+                    </div>
+
+                    <!-- Semester -->
+                    <div class="form-group" id="group-semester">
+                        <label for="semester">Semester <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-calendar-check icon"></i>
+                            <select id="semester" name="semester" required>
+                                <option value="">-- Select Semester --</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                                <option value="7">Semester 7</option>
+                                <option value="8">Semester 8</option>
+                            </select>
+                            <i class="fa-solid status-icon"></i>
+                        </div>
+                        <span class="error-msg" id="error-semester">Please select your current semester.</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <!-- Password -->
+                    <div class="form-group" id="group-password">
+                        <label for="password">Password <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input type="password" id="password" name="password" placeholder="Min. 8 characters" required>
+                            <button type="button" class="toggle-password" id="togglePassword" aria-label="Toggle password visibility">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <i class="fa-solid status-icon"></i>
+                        </div>
+                        <div class="password-meter" id="passwordMeter">
+                            <div class="meter-bar" id="meterBar"></div>
+                        </div>
+                        <small class="password-hint" id="passwordHint">Must contain upper, lower, digit & special symbol.</small>
+                        <span class="error-msg" id="error-password">Password must be at least 8 chars with mixed characters.</span>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-group" id="group-confirmpassword">
+                        <label for="confirmpassword">Confirm Password <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-shield-halved icon"></i>
+                            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Re-enter password" required>
+                            <i class="fa-solid status-icon"></i>
+                        </div>
+                        <span class="error-msg" id="error-confirmpassword">Passwords do not match.</span>
+                    </div>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="form-group checkbox-group" id="group-terms">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span>I accept the CHARUSAT Code of Conduct and portal policies.</span>
+                    </label>
+                    <span class="error-msg" id="error-terms">You must agree before registering.</span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn btn-primary">
+                        <i class="fa-solid fa-user-plus"></i> Complete Registration
+                    </button>
+                    <button type="reset" id="resetBtn" class="btn btn-secondary">
+                        <i class="fa-solid fa-rotate-left"></i> Reset
+                    </button>
+                </div>
+            </form>
+
+            <div id="summaryModal" class="modal" style="display: none;">
+                <div class="modal-card">
+                    <div class="modal-header">
+                        <h3><i class="fa-solid fa-circle-check text-green"></i> Verified Registration Data</h3>
+                        <button type="button" class="close-modal" id="closeModal">&times;</button>
+                    </div>
+                    <div class="modal-body" id="modalData"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="modalOkBtn">OK, Continue</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 6 - Rendering External JSON with Fetch API, Search & Filter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <div class="badge">Practical 6 • ITUE203</div>
+            <h1>CHARUSAT Student Directory</h1>
+            <p>Live JSON Data Ingestion via Fetch API with Real-Time Filtering & Dynamic Metrics</p>
+        </header>
+
+        <!-- Control Bar (Search & Filters) -->
+        <section class="toolbar-card">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search by student name, ID, or skill...">
+                <button type="button" id="clearSearch" aria-label="Clear Search">&times;</button>
+            </div>
+
+            <div class="filters-row">
+                <div class="filter-item">
+                    <label for="deptFilter"><i class="fa-solid fa-filter"></i> Department:</label>
+                    <select id="deptFilter">
+                        <option value="ALL">All Departments</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="semFilter"><i class="fa-solid fa-layer-group"></i> Semester:</label>
+                    <select id="semFilter">
+                        <option value="ALL">All Semesters</option>
+                        <option value="2">Semester 2</option>
+                        <option value="4">Semester 4</option>
+                        <option value="6">Semester 6</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="sortBy"><i class="fa-solid fa-arrow-down-wide-short"></i> Sort By:</label>
+                    <select id="sortBy">
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="cgpa-desc">CGPA (High to Low)</option>
+                        <option value="cgpa-asc">CGPA (Low to High)</option>
+                    </select>
+                </div>
+
+                <button id="reloadBtn" class="btn btn-reload" title="Refresh JSON data">
+                    <i class="fa-solid fa-arrows-rotate"></i> Reload
+                </button>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stat-card">
+                <span class="stat-label">Total Records</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Matching Filter</span>
+                <span class="stat-value" id="filteredCount">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Average CGPA</span>
+                <span class="stat-value" id="avgCgpa">0.00</span>
+            </div>
+        </section>
+
+        <!-- Loading & Error States -->
+        <div id="loadingState" class="state-box" style="display: none;">
+            <div class="spinner"></div>
+            <p>Fetching JSON records from server...</p>
+        </div>
+
+        <div id="errorState" class="state-box alert-error" style="display: none;">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <p id="errorText">Failed to load student data.</p>
+        </div>
+
+        <!-- Student Cards Grid -->
+        <main>
+            <div id="studentGrid" class="student-grid"></div>
+            <div id="noResults" class="state-box" style="display: none;">
+                <i class="fa-regular fa-folder-open"></i>
+                <p>No student records found matching the given criteria.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
